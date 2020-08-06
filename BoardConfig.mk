@@ -13,6 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+
 # Inherit from common msm8953-common
 -include device/xiaomi/msm8953-common/BoardConfigCommon.mk
 
@@ -45,7 +46,7 @@ VENDOR_SECURITY_PATCH := 2019-05-05
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Twrp
--include $(DEVICE_PATH)/twrp/twrp.mk
+-include device/twrp/tissot/twrp.mk
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)

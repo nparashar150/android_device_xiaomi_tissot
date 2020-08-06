@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_tissot.mk
+    $(LOCAL_DIR)/colt_tissot.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_tissot-user \
-    lineage_tissot-userdebug \
-    lineage_tissot-eng \
+    colt_tissot-user \
+    colt_tissot-userdebug \
+    colt_tissot-eng \
