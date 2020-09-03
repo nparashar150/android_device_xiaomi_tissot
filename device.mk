@@ -19,10 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
 # Inherit from msm8953-common
 $(call inherit-product, device/xiaomi/msm8953-common/msm8953.mk)
@@ -115,9 +112,11 @@ $(call inherit-product, build/target/product/verity.mk)
 # Via
 PRODUCT_PACKAGES += \
     Via
-#GCam Go
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
+
+# GCam Go
 PRODUCT_PACKAGES += \
     GCam
-#AIMP Music Player
-PRODUCT_PACKAGES += \
-    AIMP
+
