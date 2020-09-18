@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/colt_tissot.mk
+    $(LOCAL_DIR)/aosp_tissot.mk
 
 COMMON_LUNCH_CHOICES := \
-    colt_tissot-user \
-    colt_tissot-userdebug \
-    colt_tissot-eng \
+    aosp_tissot-userdebug \
+    aosp_tissot-eng \
+    aosp_tissot-user \

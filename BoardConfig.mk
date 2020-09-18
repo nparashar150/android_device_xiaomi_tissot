@@ -13,7 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
 # Inherit from common msm8953-common
 -include device/xiaomi/msm8953-common/BoardConfigCommon.mk
 
@@ -40,20 +39,16 @@ TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/enable_dt2w"
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security Patch Level
-VENDOR_SECURITY_PATCH := 2019-05-05
+VENDOR_SECURITY_PATCH := 2020-02-05
 
 # Sepolicy
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Twrp
--include device/twrp/tissot/twrp.mk
+-include $(DEVICE_PATH)/twrp/twrp.mk
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/tissot/BoardConfigVendor.mk
-
-# Vendor init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_tissot
-TARGET_RECOVERY_DEVICE_MODULES := libinit_tissot

@@ -19,10 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
 # Inherit from msm8953-common
 $(call inherit-product, device/xiaomi/msm8953-common/msm8953.mk)
@@ -45,22 +42,12 @@ PRODUCT_PACKAGES += \
 
 # Boot control
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl.recovery \
-    bootctrl.msm8953.recovery
-
-PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
     android.hardware.boot@1.0-service \
+    android.hardware.boot@1.0-impl.recovery \
     bootctrl.msm8953 \
+    bootctrl.msm8953.recovery
 
-PRODUCT_PACKAGES_DEBUG += \
-    bootctl
-
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.msm8953 \
-    libcutils \
-    libgptutils.tissot.recovery \
-    libz
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
@@ -95,10 +82,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
-# Touch HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.xiaomi_8953
-
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
@@ -112,3 +95,6 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc/7824900.sdhci/by-name/system
 $(call inherit-product, build/target/product/verity.mk)
 
+# Camera
+PRODUCT_PACKAGES += \
+    Gcam
