@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-     Copyright (C) 2015-2018 AOSiP
+<!-- Copyright (C) 2019 The LineageOS Project
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -11,10 +10,12 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+
+<!-- Camera app resources that may need to be customized
+     for different hardware or product builds. -->
 <resources>
- <!-- About - Device specific links -->
-<string name="about_device_fw_ver" translatable="false">V10.0.24.0PDHMIXM_MODEM.zip</string> <!-- Firmware version -->
-<string name="about_device_fw_link" translatable="false">https://drive.google.com/file/d/1W3J0_k1IGvdPFQGV7QySVufnAdTLwqLE/view?usp=sharing</string> <!-- Firmware link -->
-<string name="maintainer_name">Murtaza Piplod(mtpiplod)</string>
-<string name="maintainer_telegram">https://t.me/aosip_tissot</string>
+    <!-- Enable support for camera api v2 -->
+    <bool name="support_camera_api_v2">true</bool>
+    <!-- Enable support for bokeh mode -->
+    <bool name="support_bokeh_mode">true</bool>
 </resources>
