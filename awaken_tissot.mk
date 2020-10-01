@@ -21,7 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from tissot device
 $(call inherit-product, device/xiaomi/tissot/device.mk)
 
-# Inherit some common Awaken OS stuff.
+# Inherit some common DerpFest OS stuff.
 $(call inherit-product, vendor/awaken/config/common.mk)
 
 # Device identifier. This must come after all inclusions
