@@ -33,9 +33,7 @@
 #include "property_service.h"
 #include "vendor_init.h"
 
-int property_set(const char *key, const char *value) {
-    return __system_property_set(key, value);
-}
+using android::init::property_set;
 
 void property_override(char const prop[], char const value[])
 {
@@ -58,4 +56,3 @@ void property_override_dual(char const system_prop[], char const vendor_prop[],
 void vendor_load_properties()
 {
 }
-
