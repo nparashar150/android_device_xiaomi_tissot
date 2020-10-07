@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/potato_tissot.mk
+    $(LOCAL_DIR)/statix_tissot.mk
 
 COMMON_LUNCH_CHOICES := \
-    potato_tissot-user \
-    potato_tissot-userdebug \
-    potato_tissot-eng \
+    statix_tissot-user \
+    statix_tissot-userdebug \
+    statix_tissot-eng \
